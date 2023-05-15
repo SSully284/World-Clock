@@ -18,6 +18,17 @@ function updateTime() {
 
   yukonDateElement.innerHTML = yukonTime.format("MMMM Do YYYY");
   yukonTimeElement.innerHTML = yukonTime.format("h:mm:ss [<small>]A[</small>]");
+
+  // Barbados
+  let barbadosElement = document.querySelector("#barbados");
+  let barbadosDateElement = barbadosElement.querySelector(".date");
+  let barbadosTimeElement = barbadosElement.querySelector(".time");
+  let barbadosTime = moment().tz("America/Barbados");
+
+  barbadosDateElement.innerHTML = barbadosTime.format("MMMM Do YYYY");
+  barbadosTimeElement.innerHTML = barbadosTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
